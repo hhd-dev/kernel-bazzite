@@ -2,3 +2,5 @@
 *.bz2
 kernel-6.*/**
 *.log
+build
+buildroot
