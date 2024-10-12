@@ -163,7 +163,7 @@ Summary: The Linux kernel
 %define specrpmversion 6.11.3
 %define specversion 6.11.3
 %define patchversion 6.11
-%define pkgrelease 300
+%define pkgrelease 301
 %define kversion 6
 %define tarfile_release 6.11.3
 # This is needed to do merge window version magic
