@@ -26,7 +26,7 @@ jobs:
         run: |
           sudo podman build . --tag 'fedora_builder'
       - name: Compile Kernel
-        run: sudo podman run -it --rm -v $(pwd):/workspace fedora_builder \
+        run: sudo podman run --rm -v $(pwd):/workspace fedora_builder \
           fedpkg --release "${{ matrix.fedora_version }}" \
           local --arch "${{ matrix.arch }}" --with baseonly \
           --builddir build --buildrootdir buildroot
