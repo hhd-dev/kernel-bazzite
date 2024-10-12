@@ -28,7 +28,7 @@ jobs:
       - name: Compile Kernel
         run: sudo podman run -it --rm -v $(pwd):/workspace localhost/fedora \
           fedpkg --release "${{ matrix.fedora_version }}" \
-          local --arch "${{ matrix.arch }}" \
+          local --arch "${{ matrix.arch }}" --with baseonly \
           --builddir build --buildrootdir buildroot
 
       - name: Upload Kernel
