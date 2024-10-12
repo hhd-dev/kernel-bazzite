@@ -2,7 +2,6 @@ name: Build Bazzite Kernel
 
 on:
   workflow_dispatch:
-  
   release:
     types: [published]
 
@@ -25,10 +24,10 @@ jobs:
 
       - name: Create Build Environment
         run: |
-          podman build . --tag 'fedora_builder'
+          sudo podman build . --tag 'fedora_builder'
       - name: Compile Kernel
-        run: podman run --rm -v $(pwd):/workspace fedora_builder \
-          fedpkg --release "f${{ matrix.fedora_version }}" \
+        run: sudo podman run --rm -v $(pwd):/workspace fedora_builder fedpkg \
+          --release "f${{ matrix.fedora_version }}" \
           local --arch "${{ matrix.arch }}" --with baseonly \
           --builddir build --buildrootdir buildroot
 
