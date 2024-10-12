@@ -11,7 +11,11 @@ RUN dnf install -y fedpkg fedora-packager rpmdevtools ncurses-devel pesign \
     systemd-boot-unsigned systemd-ukify which xmlto xz-devel zlib-devel \
     && dnf clean all
 
-RUN useradd -m -s /bin/bash builder
+ARG UID=1000
+ARG GID=1000
+
+RUN groupadd -g $GID -o builder
+RUN useradd -m -u $UID -g $GID -o -s /bin/bash builder
 
 USER builder
 

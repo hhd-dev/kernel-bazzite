@@ -24,7 +24,7 @@ jobs:
 
       - name: Create Build Environment
         run: |
-          sudo podman build . --tag 'fedora_builder'
+          sudo podman build . --tag 'fedora_builder' --build-arg UID=$(id -u) --build-arg GID=$(id -g)
       - name: Compile Kernel
         run: |
           sudo podman run --rm -v $(pwd):/workspace fedora_builder \
