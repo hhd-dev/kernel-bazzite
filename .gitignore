@@ -1,2 +1,4 @@
 *.xz
 *.bz2
+kernel-6.*/**
+*.log
