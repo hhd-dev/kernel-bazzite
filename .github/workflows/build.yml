@@ -1,0 +1,47 @@
+name: Build Bazzite Kernel
+
+on:
+  workflow_dispatch:
+  release:
+    types: [published]
+
+permissions:
+  contents: read
+
+jobs:
+  build_kernel:
+    runs-on: ubuntu-24.04
+    environment: prod
+    strategy:
+      fail-fast: false
+      matrix:
+        arch: [x86_64]
+        fedora_version: [41]
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Create Build Environment
+        run: |
+          sudo podman build . --tag 'fedora_builder'
+      - name: Compile Kernel
+        run: sudo podman run -it --rm -v $(pwd):/workspace localhost/fedora \
+          fedpkg --release "${{ matrix.fedora_version }}" \
+          local --arch "${{ matrix.arch }}" \
+          --builddir build --buildrootdir buildroot
+
+      - name: Upload Kernel
+        uses: softprops/action-gh-release@v2
+        with:
+          files: |
+            .build-*.log
+            ${{ matrix.arch }}/kernel-*.rpm
+          tag_name: ${{ github.ref_name }}
+          body: |
+            kernel stuff
+          draft: true
+          # if we did not run on a release, it is a pre-release
+          prerelease: true # contains(github.ref, 'pre')
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
