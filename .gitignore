@@ -4,3 +4,4 @@ kernel-6.*/**
 *.log
 build
 buildroot
+*.rpm
