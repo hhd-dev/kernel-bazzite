@@ -1016,6 +1016,7 @@ Source4002: gating.yaml
 %if !%{nopatches}
 
 Patch1: patch-%{patchversion}-redhat.patch
+Patch2: handheld.patch
 %endif
 
 # empty final patch to facilitate testing of kernel patches
@@ -1858,6 +1859,7 @@ cp -a %{SOURCE1} .
 %if !%{nopatches}
 
 ApplyOptionalPatch patch-%{patchversion}-redhat.patch
+ApplyOptionalPatch handheld.patch
 %endif
 
 ApplyOptionalPatch linux-kernel-test.patch
