@@ -16,3 +16,5 @@ RUN useradd -m -s /bin/bash builder
 USER builder
 
 WORKDIR /workspace
+
+ENTRYPOINT [ "env" ]
