@@ -65,6 +65,29 @@ jobs:
             .build-*.log
             debuginfo/*.rpm
           compression-level: 7
+      
+      - name: Convert to Arch
+        if: matrix.arch == 'x86_64'
+        run: |
+          # Grab kernel ver from the log
+          KERNEL_VER=$(ls -a | grep .build | head -n 1 | sed 's/.build-//' | sed 's/.log//')
+          ARCH_VER=$(echo $KERNEL_VER | sed 's/-/./g')
+          # Place in PKGBUILD
+          cat PKGBUILD | \
+            sed "s/VERSION_FEDORA/${KERNEL_VER}.x86_64/" | \
+            sed "s/VERSION_ARCH/${ARCH_VER}/" \
+            > x86_64/PKGBUILD
+          sudo podman build . -f Dockerfile-arch --tag 'arch_builder' --build-arg UID=$(id -u) --build-arg GID=$(id -g) 
+          sudo podman run --rm -v $(pwd)/x86_64:/workspace arch_builder makepkg -s
+
+      - name: Upload Kernel arch package to action
+        uses: actions/upload-artifact@v4
+        if: matrix.arch == 'x86_64'
+        with:
+          name: linux-f${{ matrix.fedora_version}}-arch
+          path: |
+            x86_64/linux-*.pkg.tar.zst
+          compression-level: 7
 
       - name: Upload Kernel to release
         if: github.event_name == 'release'
@@ -73,6 +96,8 @@ jobs:
           files: |
             .build-*.log
             ${{ matrix.arch }}/kernel-*.rpm
+            x86_64/linux-*.pkg.tar.zst
           make_latest: true
+          fail_on_unmatched_files: false
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
