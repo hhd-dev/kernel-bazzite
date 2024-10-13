@@ -106,7 +106,7 @@ jobs:
         with:
           attempt_limit: 3
           attempt_delay: 15000
-          uses: softprops/action-gh-release@v2
+          action: softprops/action-gh-release@v2
           with: |
             files: |
               .build-*.log
