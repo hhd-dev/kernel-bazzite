@@ -60,7 +60,7 @@ jobs:
       - name: Upload Kernel debuginfo to action
         uses: actions/upload-artifact@v4
         with:
-          name: kernel-f${{ matrix.fedora_version}}-${{ matrix.arch }}
+          name: kernel-f${{ matrix.fedora_version}}-${{ matrix.arch }}-debuginfo
           path: |
             .build-*.log
             debuginfo/*.rpm
