@@ -19,8 +19,8 @@ jobs:
         fedora_version: [40]
 
     steps:
-      # - name: Maximize build space
-      #   uses: ublue-os/remove-unwanted-software@v7
+      - name: Maximize build space
+        uses: ublue-os/remove-unwanted-software@v7
 
       - name: Checkout repository
         uses: actions/checkout@v4
