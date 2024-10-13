@@ -50,7 +50,7 @@ jobs:
           path: |
             .build-*.log
             ${{ matrix.arch }}/kernel-*.rpm
-          compression-level: 0 # already compressed
+          compression-level: 7
 
       - name: Upload Kernel to release
         if: github.event_name == 'release'
