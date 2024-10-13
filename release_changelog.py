@@ -1,4 +1,4 @@
-URL = "https://api.github.com/repos/hhd-dev/linux-bazzite/releases"
+URL = "https://api.github.com/repos/hhd-dev/kernel-bazzite/releases"
 
 import requests
 import sys
