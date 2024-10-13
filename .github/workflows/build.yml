@@ -38,7 +38,7 @@ jobs:
       - name: Upload Kernel to action
         uses: actions/upload-artifact@v4
         with:
-          name: kernel
+          name: kernel-f${{ matrix.fedora_version}}-${{ matrix.arch }}
           path: |
             .build-*.log
             ${{ matrix.arch }}/kernel-*.rpm
@@ -53,7 +53,7 @@ jobs:
             ${{ matrix.arch }}/kernel-*.rpm
           tag_name: ${{ github.ref_name }}
           body: |
-            Fill me in. Workflow ran manually.
+            Fill me in. Workflow ran manually (?).
           draft: true
           # if we did not run on a release, it is a pre-release
           prerelease: true # contains(github.ref, 'pre')
