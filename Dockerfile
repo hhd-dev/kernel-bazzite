@@ -1,4 +1,6 @@
-FROM fedora
+ARG FEDORA_VERSION=41
+
+FROM fedora:${FEDORA_VERSION}
 
 RUN dnf install -y fedpkg fedora-packager rpmdevtools ncurses-devel pesign \
     asciidoc audit-libs-devel bc bindgen binutils-devel bison clang dwarves \
@@ -9,7 +11,7 @@ RUN dnf install -y fedpkg fedora-packager rpmdevtools ncurses-devel pesign \
     numactl-devel openssl openssl-devel pciutils-devel perl perl-devel \
     perl-generators python3-devel python3-docutils rsync rust rust-src \
     systemd-boot-unsigned systemd-ukify which xmlto xz-devel zlib-devel \
-    && dnf clean all
+    python3-requests hmaccalc dracut tpm2-tools && dnf clean all
 
 ARG UID=1000
 ARG GID=1000

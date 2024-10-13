@@ -35,12 +35,21 @@ jobs:
 
       - name: Create Build Environment
         run: |
-          sudo podman build . --tag 'fedora_builder' --build-arg UID=$(id -u) --build-arg GID=$(id -g)
+          FEDORA_VERSION="${{ matrix.fedora_version }}"
+          sudo podman build . --tag 'fedora_builder' \
+            --build-arg UID=$(id -u) --build-arg GID=$(id -g) \
+            --build-arg FEDORA_VERSION=${FEDORA_VERSION:-41}
+      - name: Write Changelog
+        run: |
+          sudo podman run --rm -v $(pwd):/workspace fedora_builder \
+            python3 release_changelog.py
       - name: Compile Kernel
         run: |
+          FEDORA_VERSION="${{ matrix.fedora_version }}"
+          ARCH="${{ matrix.arch }}"
           sudo podman run --rm -v $(pwd):/workspace fedora_builder fedpkg \
-            --name kernel --namespace rpms --release "f${{ matrix.fedora_version }}" \
-            local --arch "${{ matrix.arch }}" --with baseonly \
+            --name kernel --namespace rpms --release "f${FEDORA_VERSION:-41}" \
+            local --arch ${ARCH:-x86_64} --with baseonly \
             --builddir build --buildrootdir buildroot
       
       - name: Separate debuginfo into different folder
