@@ -21,7 +21,7 @@ jobs:
     steps:
       - name: Maximize build space
         uses: ublue-os/remove-unwanted-software@v7
-        
+
       - name: Checkout repository
         uses: actions/checkout@v4
 
@@ -35,7 +35,17 @@ jobs:
             local --arch "${{ matrix.arch }}" --with baseonly \
             --builddir build --buildrootdir buildroot
 
-      - name: Upload Kernel
+      - name: Upload Kernel to action
+        uses: actions/upload-artifact@v4
+        with:
+          name: kernel
+          path: |
+            .build-*.log
+            ${{ matrix.arch }}/kernel-*.rpm
+          compression-level: 0 # already compressed
+
+      - name: Upload Kernel to release
+        if: github.event_name == 'release'
         uses: softprops/action-gh-release@v2
         with:
           files: |
