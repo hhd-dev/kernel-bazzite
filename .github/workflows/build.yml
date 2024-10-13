@@ -59,11 +59,5 @@ jobs:
           files: |
             .build-*.log
             ${{ matrix.arch }}/kernel-*.rpm
-          tag_name: ${{ github.ref_name }}
-          body: |
-            Fill me in. Workflow ran manually (?).
-          draft: true
-          # if we did not run on a release, it is a pre-release
-          prerelease: true # contains(github.ref, 'pre')
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
