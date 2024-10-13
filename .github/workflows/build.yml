@@ -73,5 +73,6 @@ jobs:
           files: |
             .build-*.log
             ${{ matrix.arch }}/kernel-*.rpm
+          make_latest: true
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
