@@ -18,7 +18,7 @@ build the kernel and generate the RPMs in Github. As a bonus point, each release
 includes a repackaged version of the kernel for Arch.
 
 ## Installing
-Fedora is TODO.
+Fedora is TODO. Of course, you can always install Bazzite :).
 
 For Arch, you can install the kernel from releases by downloading it
 and running `sudo pacman -U <file>`:
