@@ -42,6 +42,11 @@ jobs:
             --name kernel --namespace rpms --release "f${{ matrix.fedora_version }}" \
             local --arch "${{ matrix.arch }}" --with baseonly \
             --builddir build --buildrootdir buildroot
+      
+      - name: Separate debuginfo into different folder
+        run: |
+          mkdir -p debuginfo
+          mv ${{ matrix.arch }}/kernel-debuginfo-*.rpm debuginfo/
 
       - name: Upload Kernel to action
         uses: actions/upload-artifact@v4
@@ -50,6 +55,15 @@ jobs:
           path: |
             .build-*.log
             ${{ matrix.arch }}/kernel-*.rpm
+          compression-level: 7
+
+      - name: Upload Kernel debuginfo to action
+        uses: actions/upload-artifact@v4
+        with:
+          name: kernel-f${{ matrix.fedora_version}}-${{ matrix.arch }}
+          path: |
+            .build-*.log
+            debuginfo/*.rpm
           compression-level: 7
 
       - name: Upload Kernel to release
