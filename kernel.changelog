@@ -1,3 +1,8 @@
+* Thu Oct 17 2024 Augusto Caringi <acaringi@redhat.com> [6.11.4-0]
+- Add F39 and F40 to release_targets (Justin M. Forbes)
+- Linux v6.11.4
+Resolves: 
+
 * Thu Oct 10 2024 Justin M. Forbes <jforbes@fedoraproject.org> [6.11.3-0]
 - Add bugs to BugsFixed (Justin M. Forbes)
 - HID: amd_sfh: Switch to device-managed dmam_alloc_coherent() (Basavaraj Natikar)
