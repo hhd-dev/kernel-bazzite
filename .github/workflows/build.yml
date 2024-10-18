@@ -112,5 +112,4 @@ jobs:
               .build-*.log
               ${{ matrix.arch }}/kernel-*.rpm
               x86_64/linux-*.pkg.tar.zst
-            make_latest: true
             fail_on_unmatched_files: false
