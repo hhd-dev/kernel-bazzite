@@ -1,7 +1,7 @@
 From 4e20ad3a3761ecb5b9a3930555b13d42975e06ab Mon Sep 17 00:00:00 2001
 From: Antheas Kapenekakis <git@antheas.dev>
 Date: Sat, 12 Oct 2024 19:02:51 +0200
-Subject: [PATCH v1.4 001/112] [BEGIN] workaround for i915
+Subject: [PATCH v1.4 001/113] [BEGIN] workaround for i915
 
 getting stuck during async page flips on Nvidia PRIME systems
 Link: https://gitlab.freedesktop.org/xorg/xserver/-/issues/24
@@ -13,7 +13,7 @@ Link: https://gitlab.freedesktop.org/xorg/driver/xf86-video-intel/-/issues/208
 From 500b5dae94384146dce568affe0521c575acf96a Mon Sep 17 00:00:00 2001
 From: Jan200101 <sentrycraft123@gmail.com>
 Date: Mon, 14 Nov 2022 20:13:53 +0100
-Subject: [PATCH v1.4 002/112] drm/i915/quirks: disable async flipping on
+Subject: [PATCH v1.4 002/113] drm/i915/quirks: disable async flipping on
  specific devices
 
 Signed-off-by: Jan200101 <sentrycraft123@gmail.com>
@@ -66,7 +66,7 @@ index dfd8b4960e6d..a63b3d513075 100644
 From 113bd6060b39868beb312eedef2bd23f79a14ba0 Mon Sep 17 00:00:00 2001
 From: Jan200101 <sentrycraft123@gmail.com>
 Date: Sat, 30 Mar 2024 19:20:48 +0100
-Subject: [PATCH v1.4 003/112] drm/i915: add kernel parameter to disable async
+Subject: [PATCH v1.4 003/113] drm/i915: add kernel parameter to disable async
  page flipping
 
 Signed-off-by: Jan200101 <sentrycraft123@gmail.com>
@@ -138,7 +138,7 @@ index a7c7812d5791..51ca0d6aea26 100644
 From ae786cbcefa75a8f4fc485a752f098669103fb1b Mon Sep 17 00:00:00 2001
 From: Antheas Kapenekakis <git@antheas.dev>
 Date: Sat, 12 Oct 2024 19:22:43 +0200
-Subject: [PATCH v1.4 004/112] [BEGIN] Gamescope Framerate fixups by Valve
+Subject: [PATCH v1.4 004/113] [BEGIN] Gamescope Framerate fixups by Valve
 
 also fixes https://gitlab.freedesktop.org/drm/amd/-/issues/2733
 -- 
@@ -148,7 +148,7 @@ also fixes https://gitlab.freedesktop.org/drm/amd/-/issues/2733
 From c6737c3f2106347f99073ba9ae10a9ce03469fc5 Mon Sep 17 00:00:00 2001
 From: Thomas Crider <gloriouseggroll@gmail.com>
 Date: Mon, 18 Dec 2023 03:36:09 -0500
-Subject: [PATCH v1.4 005/112] revert 1101185bc50f5e45b8b89300914d9aa35a0c8cbe
+Subject: [PATCH v1.4 005/113] revert 1101185bc50f5e45b8b89300914d9aa35a0c8cbe
 
 ---
  drivers/gpu/drm/amd/display/amdgpu_dm/amdgpu_dm.c | 4 ++--
@@ -183,7 +183,7 @@ index 4f19e9736a67..029457a3e258 100644
 From 2824a052bcebdde4a954c6773cbb2ece6a057c21 Mon Sep 17 00:00:00 2001
 From: Simon Ser <contact@emersion.fr>
 Date: Tue, 30 Aug 2022 17:29:26 +0000
-Subject: [PATCH v1.4 006/112] drm: introduce
+Subject: [PATCH v1.4 006/113] drm: introduce
  drm_mode_config.atomic_async_page_flip_not_supported
 MIME-Version: 1.0
 Content-Type: text/plain; charset=UTF-8
@@ -317,7 +317,7 @@ index ab0f167474b1..5f311be7bcf2 100644
 From 3e612717395bd1a6fb03d1fc6569a79fca23acc8 Mon Sep 17 00:00:00 2001
 From: Simon Ser <contact@emersion.fr>
 Date: Tue, 30 Aug 2022 17:29:52 +0000
-Subject: [PATCH v1.4 007/112] amd/display: indicate support for atomic async
+Subject: [PATCH v1.4 007/113] amd/display: indicate support for atomic async
  page-flips on DC
 MIME-Version: 1.0
 Content-Type: text/plain; charset=UTF-8
@@ -362,7 +362,7 @@ index fb0e63e6cdf2..029457a3e258 100644
 From 1437906b219ad4b27b27ce6bdffa79f09d2d036f Mon Sep 17 00:00:00 2001
 From: Joshua Ashton <joshua@froggi.es>
 Date: Mon, 14 Nov 2022 19:52:30 +0000
-Subject: [PATCH v1.4 008/112] drm/amd/display: Always set crtcinfo from
+Subject: [PATCH v1.4 008/113] drm/amd/display: Always set crtcinfo from
  create_stream_for_sink
 
 Given that we always pass dm_state into here now, this won't ever
@@ -408,7 +408,7 @@ index 029457a3e258..5266424ce15b 100644
 From e4b577f7fa9731349c6e20938675ca7b45d292a2 Mon Sep 17 00:00:00 2001
 From: Hamza Mahfooz <hamza.mahfooz@amd.com>
 Date: Fri, 4 Aug 2023 11:13:04 -0400
-Subject: [PATCH v1.4 009/112] drm/amd/display: ensure async flips are only
+Subject: [PATCH v1.4 009/113] drm/amd/display: ensure async flips are only
  accepted for fast updates
 
 We should be checking to see if async flips are supported in
@@ -460,7 +460,7 @@ index 99014339aaa3..1726bd1f3de4 100644
 From aff73e68b60ec6f700b2ab03968fc98bed1b0eb9 Mon Sep 17 00:00:00 2001
 From: Antheas Kapenekakis <git@antheas.dev>
 Date: Sat, 12 Oct 2024 20:36:57 +0200
-Subject: [PATCH v1.4 010/112] [BEGIN] linux-surface patches
+Subject: [PATCH v1.4 010/113] [BEGIN] linux-surface patches
 
 -- 
 2.47.0
@@ -469,7 +469,7 @@ Subject: [PATCH v1.4 010/112] [BEGIN] linux-surface patches
 From 04fa3925c0bcf8d2ddc28998b7821891be88a6a7 Mon Sep 17 00:00:00 2001
 From: Maximilian Luz <luzmaximilian@gmail.com>
 Date: Sun, 9 Jun 2024 19:48:58 +0200
-Subject: [PATCH v1.4 011/112] Revert "efi/x86: Set the PE/COFF header's NX
+Subject: [PATCH v1.4 011/113] Revert "efi/x86: Set the PE/COFF header's NX
  compat flag unconditionally"
 
 This reverts commit 891f8890a4a3663da7056542757022870b499bc1.
@@ -507,7 +507,7 @@ index b5c79f43359b..a1bbedd989e4 100644
 From 56201690599e30962a38535533e2845508bb4ed4 Mon Sep 17 00:00:00 2001
 From: "J. Eduardo" <j.eduardo@gmail.com>
 Date: Sun, 25 Aug 2024 14:17:45 +0200
-Subject: [PATCH v1.4 012/112] PM: hibernate: Add a lockdown_hibernate
+Subject: [PATCH v1.4 012/113] PM: hibernate: Add a lockdown_hibernate
  parameter
 
 This allows the user to tell the kernel that they know better (namely,
@@ -584,7 +584,7 @@ index 0a213f69a9e4..8e4f9dcc9f4c 100644
 From 77315ec35549b92a0f265c5799dd7819eb3d449a Mon Sep 17 00:00:00 2001
 From: Tsuchiya Yuto <kitakar@gmail.com>
 Date: Sun, 18 Oct 2020 16:42:44 +0900
-Subject: [PATCH v1.4 013/112] (surface3-oemb) add DMI matches for Surface 3
+Subject: [PATCH v1.4 013/113] (surface3-oemb) add DMI matches for Surface 3
  with broken DMI table
 
 On some Surface 3, the DMI table gets corrupted for unknown reasons
@@ -686,7 +686,7 @@ index e4c3492a0c28..0b930c91bccb 100644
 From 546b53b0ee56db3b5ecd5d5ad70cebec34776c79 Mon Sep 17 00:00:00 2001
 From: =?UTF-8?q?Jonas=20Dre=C3=9Fler?= <verdre@v0yd.nl>
 Date: Tue, 3 Nov 2020 13:28:04 +0100
-Subject: [PATCH v1.4 014/112] mwifiex: Add quirk resetting the PCI bridge on
+Subject: [PATCH v1.4 014/113] mwifiex: Add quirk resetting the PCI bridge on
  MS Surface devices
 
 The most recent firmware of the 88W8897 card reports a hardcoded LTR
@@ -854,7 +854,7 @@ index d6ff964aec5b..5d30ae39d65e 100644
 From 34c4db6559a4c7741bcfcdcfb318fbb4cfaa9ce0 Mon Sep 17 00:00:00 2001
 From: Tsuchiya Yuto <kitakar@gmail.com>
 Date: Sun, 4 Oct 2020 00:11:49 +0900
-Subject: [PATCH v1.4 015/112] mwifiex: pcie: disable bridge_d3 for Surface
+Subject: [PATCH v1.4 015/113] mwifiex: pcie: disable bridge_d3 for Surface
  gen4+
 
 Currently, mwifiex fw will crash after suspend on recent kernel series.
@@ -1011,7 +1011,7 @@ index 5d30ae39d65e..c14eb56eb911 100644
 From 474b1aa6bdde4a5f74182c6a6aa3057397d7d2fb Mon Sep 17 00:00:00 2001
 From: =?UTF-8?q?Jonas=20Dre=C3=9Fler?= <verdre@v0yd.nl>
 Date: Thu, 25 Mar 2021 11:33:02 +0100
-Subject: [PATCH v1.4 016/112] Bluetooth: btusb: Lower passive lescan interval
+Subject: [PATCH v1.4 016/113] Bluetooth: btusb: Lower passive lescan interval
  on Marvell 88W8897
 
 The Marvell 88W8897 combined wifi and bluetooth card (pcie+usb version)
@@ -1090,7 +1090,7 @@ index a1e9b052bc84..ca5193dd1760 100644
 From 3334b8a7a706c446d6a6ec55bf08f8fac66b2fa1 Mon Sep 17 00:00:00 2001
 From: Maximilian Luz <luzmaximilian@gmail.com>
 Date: Sat, 27 Feb 2021 00:45:52 +0100
-Subject: [PATCH v1.4 017/112] ath10k: Add module parameters to override board
+Subject: [PATCH v1.4 017/113] ath10k: Add module parameters to override board
  files
 
 Some Surface devices, specifically the Surface Go and AMD version of the
@@ -1212,7 +1212,7 @@ index b3294287bce1..2936fdae823c 100644
 From dba90f344ff9b12c94378de6678fe63e5e911546 Mon Sep 17 00:00:00 2001
 From: Dorian Stoll <dorian.stoll@tmsp.io>
 Date: Thu, 30 Jul 2020 13:21:53 +0200
-Subject: [PATCH v1.4 018/112] mei: me: Add Icelake device ID for iTouch
+Subject: [PATCH v1.4 018/113] mei: me: Add Icelake device ID for iTouch
 
 Signed-off-by: Dorian Stoll <dorian.stoll@tmsp.io>
 Patchset: ipts
@@ -1252,7 +1252,7 @@ index 6589635f8ba3..a1df48a434e2 100644
 From a8445549b5fcf1aaf095967e3d44badcbf81e7cd Mon Sep 17 00:00:00 2001
 From: Liban Hannan <liban.p@gmail.com>
 Date: Tue, 12 Apr 2022 23:31:12 +0100
-Subject: [PATCH v1.4 019/112] iommu: Use IOMMU passthrough mode for IPTS
+Subject: [PATCH v1.4 019/113] iommu: Use IOMMU passthrough mode for IPTS
 
 Adds a quirk so that IOMMU uses passthrough mode for the IPTS device.
 Otherwise, when IOMMU is enabled, IPTS produces DMAR errors like:
@@ -1360,7 +1360,7 @@ index e3e513cabc86..d786fbda6eb3 100644
 From 840fe83729098a6f92e6f4bfd60a86ea468b83c4 Mon Sep 17 00:00:00 2001
 From: Dorian Stoll <dorian.stoll@tmsp.io>
 Date: Sun, 11 Dec 2022 12:00:59 +0100
-Subject: [PATCH v1.4 020/112] hid: Add support for Intel Precise Touch and
+Subject: [PATCH v1.4 020/113] hid: Add support for Intel Precise Touch and
  Stylus
 
 Based on linux-surface/intel-precise-touch@8abe268
@@ -4457,7 +4457,7 @@ index 000000000000..1f966b8b32c4
 From dba010aff5a5269ac35d96e0cea554d70e1da500 Mon Sep 17 00:00:00 2001
 From: Dorian Stoll <dorian.stoll@tmsp.io>
 Date: Sun, 11 Dec 2022 12:03:38 +0100
-Subject: [PATCH v1.4 021/112] iommu: intel: Disable source id verification for
+Subject: [PATCH v1.4 021/113] iommu: intel: Disable source id verification for
  ITHC
 
 Signed-off-by: Dorian Stoll <dorian.stoll@tmsp.io>
@@ -4500,7 +4500,7 @@ index e090ca07364b..e575193615bf 100644
 From 5c7524d533c19f2649a61db3e64a8e560e786bd0 Mon Sep 17 00:00:00 2001
 From: quo <tuple@list.ru>
 Date: Sun, 11 Dec 2022 12:10:54 +0100
-Subject: [PATCH v1.4 022/112] hid: Add support for Intel Touch Host Controller
+Subject: [PATCH v1.4 022/113] hid: Add support for Intel Touch Host Controller
 
 Based on quo/ithc-linux@34539af4726d.
 
@@ -7231,7 +7231,7 @@ index 000000000000..aec320d4e945
 From 7202a161e0202db880ecc53c8b6aae0dce10e788 Mon Sep 17 00:00:00 2001
 From: Maximilian Luz <luzmaximilian@gmail.com>
 Date: Sat, 30 Dec 2023 18:07:54 +0100
-Subject: [PATCH v1.4 023/112] hwmon: Add thermal sensor driver for Surface
+Subject: [PATCH v1.4 023/113] hwmon: Add thermal sensor driver for Surface
  Aggregator Module
 
 Some of the newer Microsoft Surface devices (such as the Surface Book
@@ -7460,7 +7460,7 @@ index 000000000000..48c3e826713f
 From 92bb092a12bb3df2aa6d56bf77bf01e619253f35 Mon Sep 17 00:00:00 2001
 From: Maximilian Luz <luzmaximilian@gmail.com>
 Date: Sat, 30 Dec 2023 18:12:23 +0100
-Subject: [PATCH v1.4 024/112] hwmon: surface_temp: Add support for sensor
+Subject: [PATCH v1.4 024/113] hwmon: surface_temp: Add support for sensor
  names
 
 The thermal subsystem of the Surface Aggregator Module allows us to
@@ -7657,7 +7657,7 @@ index 48c3e826713f..4c08926139db 100644
 From 88cb0b908049104649daa50732ba04562965e545 Mon Sep 17 00:00:00 2001
 From: Maximilian Luz <luzmaximilian@gmail.com>
 Date: Sat, 25 Jul 2020 17:19:53 +0200
-Subject: [PATCH v1.4 025/112] i2c: acpi: Implement RawBytes read access
+Subject: [PATCH v1.4 025/113] i2c: acpi: Implement RawBytes read access
 
 Microsoft Surface Pro 4 and Book 1 devices access the MSHW0030 I2C
 device via a generic serial bus operation region and RawBytes read
@@ -7769,7 +7769,7 @@ index 14ae0cfc325e..6197c5252d2a 100644
 From 39a35a49059bfa9e2ba182dd9b34c73ef600e97d Mon Sep 17 00:00:00 2001
 From: Maximilian Luz <luzmaximilian@gmail.com>
 Date: Sat, 13 Feb 2021 16:41:18 +0100
-Subject: [PATCH v1.4 026/112] platform/surface: Add driver for Surface Book 1
+Subject: [PATCH v1.4 026/113] platform/surface: Add driver for Surface Book 1
  dGPU switch
 
 Add driver exposing the discrete GPU power-switch of the  Microsoft
@@ -7968,7 +7968,7 @@ index 000000000000..68db237734a1
 From 88df6dac950eb0c5be27ac876e5c45e7fbc3e50a Mon Sep 17 00:00:00 2001
 From: Sachi King <nakato@nakato.io>
 Date: Tue, 5 Oct 2021 00:05:09 +1100
-Subject: [PATCH v1.4 027/112] Input: soc_button_array - support AMD variant
+Subject: [PATCH v1.4 027/113] Input: soc_button_array - support AMD variant
  Surface devices
 
 The power button on the AMD variant of the Surface Laptop uses the
@@ -8047,7 +8047,7 @@ index 5c5d407fe965..4e1bfe90e730 100644
 From 88dd589953e53f07dad94d29cc11bf8f8ad6ecee Mon Sep 17 00:00:00 2001
 From: Sachi King <nakato@nakato.io>
 Date: Tue, 5 Oct 2021 00:22:57 +1100
-Subject: [PATCH v1.4 028/112] platform/surface: surfacepro3_button: don't load
+Subject: [PATCH v1.4 028/113] platform/surface: surfacepro3_button: don't load
  on amd variant
 
 The AMD variant of the Surface Laptop report 0 for their OEM platform
@@ -8120,7 +8120,7 @@ index 2755601f979c..4240c98ca226 100644
 From 5534fdbb0c384996452475861a4ac22c51491d3f Mon Sep 17 00:00:00 2001
 From: Maximilian Luz <luzmaximilian@gmail.com>
 Date: Sat, 18 Feb 2023 01:02:49 +0100
-Subject: [PATCH v1.4 029/112] USB: quirks: Add USB_QUIRK_DELAY_INIT for
+Subject: [PATCH v1.4 029/113] USB: quirks: Add USB_QUIRK_DELAY_INIT for
  Surface Go 3 Type-Cover
 
 The touchpad on the Type-Cover of the Surface Go 3 is sometimes not
@@ -8162,7 +8162,7 @@ index 13171454f959..a83beefd25f3 100644
 From 9a5f63e8a65b83aaaf55dab968dd8afacb64862a Mon Sep 17 00:00:00 2001
 From: =?UTF-8?q?Jonas=20Dre=C3=9Fler?= <verdre@v0yd.nl>
 Date: Thu, 5 Nov 2020 13:09:45 +0100
-Subject: [PATCH v1.4 030/112] hid/multitouch: Turn off Type Cover keyboard
+Subject: [PATCH v1.4 030/113] hid/multitouch: Turn off Type Cover keyboard
  backlight when suspending
 
 The Type Cover for Microsoft Surface devices supports a special usb
@@ -8396,7 +8396,7 @@ index 847462650549..eea3fdbe28e9 100644
 From 51914829fbbeb5206880a90af3883c761b79433d Mon Sep 17 00:00:00 2001
 From: PJungkamp <p.jungkamp@gmail.com>
 Date: Fri, 25 Feb 2022 12:04:25 +0100
-Subject: [PATCH v1.4 031/112] hid/multitouch: Add support for surface pro type
+Subject: [PATCH v1.4 031/113] hid/multitouch: Add support for surface pro type
  cover tablet switch
 
 The Surface Pro Type Cover has several non standard HID usages in it's
@@ -8696,7 +8696,7 @@ index eea3fdbe28e9..382dd01beb82 100644
 From c4a6b68c942b2e6f2c265aa15e74836b5684fde4 Mon Sep 17 00:00:00 2001
 From: Maximilian Luz <luzmaximilian@gmail.com>
 Date: Sun, 19 Feb 2023 22:12:24 +0100
-Subject: [PATCH v1.4 032/112] PCI: Add quirk to prevent calling shutdown
+Subject: [PATCH v1.4 032/113] PCI: Add quirk to prevent calling shutdown
  mehtod
 
 Work around buggy EFI firmware: On some Microsoft Surface devices
@@ -8795,7 +8795,7 @@ index 37d97bef060f..056fce19477b 100644
 From d9dcc3a4da596c2cb0e42baf8f175489e2f1be12 Mon Sep 17 00:00:00 2001
 From: Maximilian Luz <luzmaximilian@gmail.com>
 Date: Sun, 12 Mar 2023 01:41:57 +0100
-Subject: [PATCH v1.4 033/112] platform/surface: gpe: Add support for Surface
+Subject: [PATCH v1.4 033/113] platform/surface: gpe: Add support for Surface
  Pro 9
 
 Add the lid GPE used by the Surface Pro 9.
@@ -8848,7 +8848,7 @@ index 62fd4004db31..103fc4468262 100644
 From 0fb8223d449a381dc6d56354cbcd819fd9ccb759 Mon Sep 17 00:00:00 2001
 From: Hans de Goede <hdegoede@redhat.com>
 Date: Sun, 10 Oct 2021 20:56:57 +0200
-Subject: [PATCH v1.4 034/112] ACPI: delay enumeration of devices with a _DEP
+Subject: [PATCH v1.4 034/113] ACPI: delay enumeration of devices with a _DEP
  pointing to an INT3472 device
 
 The clk and regulator frameworks expect clk/regulator consumer-devices
@@ -8925,7 +8925,7 @@ index 1329032ed09b..f5ac2e29a35f 100644
 From 9c041748cea9d8ef75d4303be4fbefc82a83beb4 Mon Sep 17 00:00:00 2001
 From: zouxiaoh <xiaohong.zou@intel.com>
 Date: Fri, 25 Jun 2021 08:52:59 +0800
-Subject: [PATCH v1.4 035/112] iommu: intel-ipu: use IOMMU passthrough mode for
+Subject: [PATCH v1.4 035/113] iommu: intel-ipu: use IOMMU passthrough mode for
  Intel IPUs
 
 Intel IPU(Image Processing Unit) has its own (IO)MMU hardware,
@@ -9037,7 +9037,7 @@ index d786fbda6eb3..3d035ecce4f3 100644
 From 49c24b41d8d38013ac152a550d1002d976eb45d5 Mon Sep 17 00:00:00 2001
 From: Daniel Scally <djrscally@gmail.com>
 Date: Sun, 10 Oct 2021 20:57:02 +0200
-Subject: [PATCH v1.4 036/112] platform/x86: int3472: Enable I2c daisy chain
+Subject: [PATCH v1.4 036/113] platform/x86: int3472: Enable I2c daisy chain
 
 The TPS68470 PMIC has an I2C passthrough mode through which I2C traffic
 can be forwarded to a device connected to the PMIC as though it were
@@ -9075,7 +9075,7 @@ index 1e107fd49f82..e3e1696e7f0e 100644
 From 0a6b46e4ce746a34e79bdc74a3fb3cd6d78fb6d4 Mon Sep 17 00:00:00 2001
 From: Daniel Scally <dan.scally@ideasonboard.com>
 Date: Thu, 2 Mar 2023 12:59:39 +0000
-Subject: [PATCH v1.4 037/112] platform/x86: int3472: Remap reset GPIO for
+Subject: [PATCH v1.4 037/113] platform/x86: int3472: Remap reset GPIO for
  INT347E
 
 ACPI _HID INT347E represents the OmniVision 7251 camera sensor. The
@@ -9133,7 +9133,7 @@ index 07b302e09340..baad1e50ca81 100644
 From 6e9c74887cb7f7da028c7324b605051e2e0168c7 Mon Sep 17 00:00:00 2001
 From: Daniel Scally <dan.scally@ideasonboard.com>
 Date: Tue, 21 Mar 2023 13:45:26 +0000
-Subject: [PATCH v1.4 038/112] media: i2c: Clarify that gain is Analogue gain
+Subject: [PATCH v1.4 038/113] media: i2c: Clarify that gain is Analogue gain
  in OV7251
 
 Update the control ID for the gain control in the ov7251 driver to
@@ -9174,7 +9174,7 @@ index 30f61e04ecaf..9c1292ca8552 100644
 From 78452f683cd04c38af7ce78a04bcc48c6b9632c6 Mon Sep 17 00:00:00 2001
 From: Daniel Scally <dan.scally@ideasonboard.com>
 Date: Wed, 22 Mar 2023 11:01:42 +0000
-Subject: [PATCH v1.4 039/112] media: v4l2-core: Acquire privacy led in
+Subject: [PATCH v1.4 039/113] media: v4l2-core: Acquire privacy led in
  v4l2_async_register_subdev()
 
 The current call to v4l2_subdev_get_privacy_led() is contained in
@@ -9226,7 +9226,7 @@ index f19c8adf2c61..923ed1b5ab8b 100644
 From 9d1a50ec23b0036979c0bfc0a641dfe67109e002 Mon Sep 17 00:00:00 2001
 From: Kate Hsuan <hpa@redhat.com>
 Date: Tue, 21 Mar 2023 23:37:16 +0800
-Subject: [PATCH v1.4 040/112] platform: x86: int3472: Add MFD cell for
+Subject: [PATCH v1.4 040/113] platform: x86: int3472: Add MFD cell for
  tps68470 LED
 
 Add MFD cell for tps68470-led.
@@ -9269,7 +9269,7 @@ index e3e1696e7f0e..423dc555093f 100644
 From 66660422213bf5042d53bebf699911e9b83582ac Mon Sep 17 00:00:00 2001
 From: Kate Hsuan <hpa@redhat.com>
 Date: Tue, 21 Mar 2023 23:37:17 +0800
-Subject: [PATCH v1.4 041/112] include: mfd: tps68470: Add masks for LEDA and
+Subject: [PATCH v1.4 041/113] include: mfd: tps68470: Add masks for LEDA and
  LEDB
 
 Add flags for both LEDA(TPS68470_ILEDCTL_ENA), LEDB
@@ -9312,7 +9312,7 @@ index 7807fa329db0..2d2abb25b944 100644
 From b74d978454ecac0d15bd3393d249ebb1650a0e43 Mon Sep 17 00:00:00 2001
 From: Kate Hsuan <hpa@redhat.com>
 Date: Tue, 21 Mar 2023 23:37:18 +0800
-Subject: [PATCH v1.4 042/112] leds: tps68470: Add LED control for tps68470
+Subject: [PATCH v1.4 042/113] leds: tps68470: Add LED control for tps68470
 
 There are two LED controllers, LEDA indicator LED and LEDB flash LED for
 tps68470. LEDA can be enabled by setting TPS68470_ILEDCTL_ENA. Moreover,
@@ -9564,7 +9564,7 @@ index 000000000000..35aeb5db89c8
 From 6d7496e3863c7b35f57081c35be3ca6ab94073f3 Mon Sep 17 00:00:00 2001
 From: mojyack <mojyack@gmail.com>
 Date: Sat, 3 Feb 2024 12:59:53 +0900
-Subject: [PATCH v1.4 043/112] media: staging: ipu3-imgu: Fix multiple calls of
+Subject: [PATCH v1.4 043/113] media: staging: ipu3-imgu: Fix multiple calls of
  s_stream on stream stop
 
 Adapt to 009905e "media: v4l2-subdev: Document and enforce .s_stream() requirements"
@@ -9612,7 +9612,7 @@ index 3df58eb3e882..81aff2d5d898 100644
 From a83b7d4f2acc3a0a1ce460d2c4a25cf611ce1245 Mon Sep 17 00:00:00 2001
 From: mojyack <mojyack@gmail.com>
 Date: Tue, 26 Mar 2024 05:55:44 +0900
-Subject: [PATCH v1.4 044/112] media: i2c: dw9719: fix probe error on surface
+Subject: [PATCH v1.4 044/113] media: i2c: dw9719: fix probe error on surface
  go 2
 
 On surface go 2, sometimes probing dw9719 fails with "dw9719: probe of i2c-INT347A:00-VCM failed with error -121".
@@ -9646,7 +9646,7 @@ index c626ed845928..0094cfda57ea 100644
 From 8c69cdddcf8716cf114c62340da1f6f0d00b9eb8 Mon Sep 17 00:00:00 2001
 From: Sachi King <nakato@nakato.io>
 Date: Sat, 29 May 2021 17:47:38 +1000
-Subject: [PATCH v1.4 045/112] ACPI: Add quirk for Surface Laptop 4 AMD missing
+Subject: [PATCH v1.4 045/113] ACPI: Add quirk for Surface Laptop 4 AMD missing
  irq 7 override
 
 This patch is the work of Thomas Gleixner <tglx@linutronix.de> and is
@@ -9714,7 +9714,7 @@ index 4efecac49863..88377bb0d137 100644
 From 7292a54638cf0ed85c52ffd1e18c5863815058fc Mon Sep 17 00:00:00 2001
 From: Maximilian Luz <luzmaximilian@gmail.com>
 Date: Thu, 3 Jun 2021 14:04:26 +0200
-Subject: [PATCH v1.4 046/112] ACPI: Add AMD 13" Surface Laptop 4 model to irq
+Subject: [PATCH v1.4 046/113] ACPI: Add AMD 13" Surface Laptop 4 model to irq
  7 override quirk
 
 The 13" version of the Surface Laptop 4 has the same problem as the 15"
@@ -9757,7 +9757,7 @@ index 88377bb0d137..c58f26918b17 100644
 From 47c985dd411e96583f5ea35907bca2db36ee31c2 Mon Sep 17 00:00:00 2001
 From: "Bart Groeneveld | GPX Solutions B.V" <bart@gpxbv.nl>
 Date: Mon, 5 Dec 2022 16:08:46 +0100
-Subject: [PATCH v1.4 047/112] acpi: allow usage of acpi_tad on HW-reduced
+Subject: [PATCH v1.4 047/113] acpi: allow usage of acpi_tad on HW-reduced
  platforms
 
 The specification [1] allows so-called HW-reduced platforms,
@@ -9869,7 +9869,7 @@ index b831cb8e53dc..78bd0f926505 100644
 From 17120f9167413385de0a9e0f7c8987c0cce1b35c Mon Sep 17 00:00:00 2001
 From: Antheas Kapenekakis <git@antheas.dev>
 Date: Sat, 12 Oct 2024 19:04:14 +0200
-Subject: [PATCH v1.4 048/112] [BEGIN] ROG Ally fixes
+Subject: [PATCH v1.4 048/113] [BEGIN] ROG Ally fixes
 
 -- 
 2.47.0
@@ -9878,7 +9878,7 @@ Subject: [PATCH v1.4 048/112] [BEGIN] ROG Ally fixes
 From 740285ed0f1a4a2d9bf0b15f9f1941ac189c1e23 Mon Sep 17 00:00:00 2001
 From: Antheas Kapenekakis <git@antheas.dev>
 Date: Sat, 12 Oct 2024 19:05:23 +0200
-Subject: [PATCH v1.4 049/112] add ROG Ally devices to nct6775
+Subject: [PATCH v1.4 049/113] add ROG Ally devices to nct6775
 
 ---
  drivers/hwmon/nct6775-platform.c | 2 ++
@@ -9904,7 +9904,7 @@ index 096f1daa8f2b..7c4e319ebc47 100644
 From edf22b301cb49e4668b3df49c1b831788c9b5042 Mon Sep 17 00:00:00 2001
 From: Jonathan LoBue <jlobue10@gmail.com>
 Date: Sun, 11 Aug 2024 21:53:25 -0700
-Subject: [PATCH v1.4 050/112] ALSA: hda/realtek: tas2781: Fix ROG ALLY X audio
+Subject: [PATCH v1.4 050/113] ALSA: hda/realtek: tas2781: Fix ROG ALLY X audio
 
 This patch enables the TI TAS2781 amplifier SoC for the ASUS ROG ALLY X.
 This is a design change from the original ASUS ROG ALLY, creating the need
@@ -9978,7 +9978,7 @@ index a2737c1ff920..c95a056ed764 100644
 From a9161cbc40fe023ce3311f5e013fea4b2a502632 Mon Sep 17 00:00:00 2001
 From: Baojun Xu <baojun.xu@ti.com>
 Date: Fri, 18 Oct 2024 15:11:18 +0800
-Subject: [PATCH v1.4 051/112] ALSA: hda/tas2781: Add speaker id check for ASUS
+Subject: [PATCH v1.4 051/113] ALSA: hda/tas2781: Add speaker id check for ASUS
  projects
 
 Add speaker id check by gpio in ACPI for ASUS projects.
@@ -10139,7 +10139,7 @@ index f58f434e7110..b3826944e668 100644
 From a19c91d9743134f57efa031df19212421dfaa6f5 Mon Sep 17 00:00:00 2001
 From: Antheas Kapenekakis <git@antheas.dev>
 Date: Sat, 12 Oct 2024 19:07:48 +0200
-Subject: [PATCH v1.4 052/112] [NOT FOR UPSTREAM] remove ally quirk from
+Subject: [PATCH v1.4 052/113] [NOT FOR UPSTREAM] remove ally quirk from
  asus_hid
 
 Unfortunately it bails with ENOMEM preventing the controller which
@@ -10173,7 +10173,7 @@ index a282388b7aa5..fd58eed1adde 100644
 From 0ee50665e3dec76de38847241c647cfd9ce6ab75 Mon Sep 17 00:00:00 2001
 From: Antheas Kapenekakis <git@antheas.dev>
 Date: Sat, 12 Oct 2024 19:11:05 +0200
-Subject: [PATCH v1.4 053/112] [NOT FOR UPSTREAM] Add DSDT config for original
+Subject: [PATCH v1.4 053/113] [NOT FOR UPSTREAM] Add DSDT config for original
  Ally older BIOSes
 
 Older ROG Ally BIOSes do not have a speaker configuration in the DSDT.
@@ -10254,7 +10254,7 @@ index 61d2314834e7..0b6ccd930ec8 100644
 From 211322758f77ef0afd8237d305fc68452505397c Mon Sep 17 00:00:00 2001
 From: Antheas Kapenekakis <git@antheas.dev>
 Date: Sat, 12 Oct 2024 19:29:58 +0200
-Subject: [PATCH v1.4 054/112] [BEGIN] OneXPlayer Handheld patches
+Subject: [PATCH v1.4 054/113] [BEGIN] OneXPlayer Handheld patches
 
 -- 
 2.47.0
@@ -10263,7 +10263,7 @@ Subject: [PATCH v1.4 054/112] [BEGIN] OneXPlayer Handheld patches
 From f42150d9f9ac3f895dd303ea24f0d4484e1e75ed Mon Sep 17 00:00:00 2001
 From: "Derek J. Clark" <derekjohn.clark@gmail.com>
 Date: Thu, 22 Aug 2024 11:35:25 -0700
-Subject: [PATCH v1.4 055/112] Add support for multiple new devices.
+Subject: [PATCH v1.4 055/113] Add support for multiple new devices.
 MIME-Version: 1.0
 Content-Type: text/plain; charset=UTF-8
 Content-Transfer-Encoding: 8bit
@@ -10880,7 +10880,7 @@ index 8d3b0f86cc57..b6d06370469d 100644
 From 109465db98ae47d1ed2dd5ac4b251ba07b231139 Mon Sep 17 00:00:00 2001
 From: Antheas Kapenekakis <git@antheas.dev>
 Date: Wed, 2 Oct 2024 22:01:14 +0200
-Subject: [PATCH v1.4 056/112] drm/panel-orientation-quirks: add OneXPlayer X1
+Subject: [PATCH v1.4 056/113] drm/panel-orientation-quirks: add OneXPlayer X1
  (AMD)
 
 ---
@@ -10911,7 +10911,7 @@ index 0830cae9a4d0..e52e7e73b9d0 100644
 From e0cb1a953e7f4f81785f90598ecbc48c7f9ca10c Mon Sep 17 00:00:00 2001
 From: Antheas Kapenekakis <git@antheas.dev>
 Date: Wed, 2 Oct 2024 22:17:26 +0200
-Subject: [PATCH v1.4 057/112] HID: Add quirk to ignore the touchscreen battery
+Subject: [PATCH v1.4 057/113] HID: Add quirk to ignore the touchscreen battery
  on OneXPlayer X1
 
 ---
@@ -10951,7 +10951,7 @@ index fda9dce3da99..e52fb045096a 100644
 From c4edee7a5fc7eda2495f5bff4b2786cd529611d8 Mon Sep 17 00:00:00 2001
 From: Antheas Kapenekakis <git@antheas.dev>
 Date: Sat, 12 Oct 2024 19:33:24 +0200
-Subject: [PATCH v1.4 058/112] [BEGIN] Steam Deck fixes
+Subject: [PATCH v1.4 058/113] [BEGIN] Steam Deck fixes
 
 -- 
 2.47.0
@@ -10960,7 +10960,7 @@ Subject: [PATCH v1.4 058/112] [BEGIN] Steam Deck fixes
 From df850b36107e9602fe0ab9f21ba13a335dbeff7b Mon Sep 17 00:00:00 2001
 From: Andrey Smirnov <andrew.smirnov@gmail.com>
 Date: Sat, 19 Feb 2022 16:08:36 -0800
-Subject: [PATCH v1.4 059/112] mfd: Add MFD core driver for Steam Deck
+Subject: [PATCH v1.4 059/113] mfd: Add MFD core driver for Steam Deck
 
 Add MFD core driver for Steam Deck. Doesn't really do much so far
 besides instantiating a number of MFD cells that implement all the
@@ -11147,7 +11147,7 @@ index 000000000000..0e504b3c2796
 From 823af69300d8be56f4806c6e0031f427a4d52217 Mon Sep 17 00:00:00 2001
 From: Andrey Smirnov <andrew.smirnov@gmail.com>
 Date: Sat, 19 Feb 2022 16:09:45 -0800
-Subject: [PATCH v1.4 060/112] hwmon: Add driver for Steam Deck's EC sensors
+Subject: [PATCH v1.4 060/113] hwmon: Add driver for Steam Deck's EC sensors
 
 Add driver for sensors exposed by EC firmware on Steam Deck hardware.
 
@@ -11432,7 +11432,7 @@ index 000000000000..fab9e9460bd4
 From ff6b1df654774b3322c7585df2082a8074423f4d Mon Sep 17 00:00:00 2001
 From: Andrey Smirnov <andrew.smirnov@gmail.com>
 Date: Sun, 27 Feb 2022 12:58:05 -0800
-Subject: [PATCH v1.4 061/112] leds: steamdeck: Add support for Steam Deck LED
+Subject: [PATCH v1.4 061/113] leds: steamdeck: Add support for Steam Deck LED
 
 (cherry picked from commit 85a86d19aa7022ff0555023d53aef78323a42d0c)
 Signed-off-by: Cristian Ciocaltea <cristian.ciocaltea@collabora.com>
@@ -11561,7 +11561,7 @@ index 000000000000..686500b8de73
 From e485c2f60cb426b027313cef378e43d3e168cb43 Mon Sep 17 00:00:00 2001
 From: Andrey Smirnov <andrew.smirnov@gmail.com>
 Date: Sun, 27 Feb 2022 14:46:08 -0800
-Subject: [PATCH v1.4 062/112] extcon: Add driver for Steam Deck
+Subject: [PATCH v1.4 062/113] extcon: Add driver for Steam Deck
 
 (cherry picked from commit f9f2eddae582ae39d5f89c1218448fc259b90aa8)
 Signed-off-by: Cristian Ciocaltea <cristian.ciocaltea@collabora.com>
@@ -11792,7 +11792,7 @@ index 000000000000..74f190adc8ea
 From 51ad850d147bce5261ba27ba1c0d5c8237a0cd80 Mon Sep 17 00:00:00 2001
 From: Andrey Smirnov <andrew.smirnov@gmail.com>
 Date: Sat, 15 Jul 2023 12:58:54 -0700
-Subject: [PATCH v1.4 063/112] hwmon: steamdeck-hwmon: Add support for max
+Subject: [PATCH v1.4 063/113] hwmon: steamdeck-hwmon: Add support for max
  battery level/rate
 
 Add support for max battery level/charge rate attributes.
@@ -11902,7 +11902,7 @@ index fab9e9460bd4..9d0a5471b181 100644
 From 7c017862e397b2db893faedf1242c3b701fef633 Mon Sep 17 00:00:00 2001
 From: Andrey Smirnov <andrew.smirnov@gmail.com>
 Date: Sun, 24 Sep 2023 15:02:33 -0700
-Subject: [PATCH v1.4 064/112] mfd: steamdeck: Expose controller board power in
+Subject: [PATCH v1.4 064/113] mfd: steamdeck: Expose controller board power in
  sysfs
 
 As of version 118 Deck's BIOS implements "SCBP" method that allows
@@ -12026,7 +12026,7 @@ index 0e504b3c2796..a60fa7db9141 100644
 From 12630909cb19dab365a5886df9af3a265e7802fa Mon Sep 17 00:00:00 2001
 From: Antheas Kapenekakis <git@antheas.dev>
 Date: Sat, 12 Oct 2024 19:38:52 +0200
-Subject: [PATCH v1.4 065/112] [BEGIN] Steam Deck OLED fixes
+Subject: [PATCH v1.4 065/113] [BEGIN] Steam Deck OLED fixes
 
 -- 
 2.47.0
@@ -12035,7 +12035,7 @@ Subject: [PATCH v1.4 065/112] [BEGIN] Steam Deck OLED fixes
 From 81a0f8a37059f800756076035cf41b3c409955cb Mon Sep 17 00:00:00 2001
 From: GloriousEggroll <gloriouseggroll@gmail.com>
 Date: Thu, 4 Apr 2024 12:43:12 -0600
-Subject: [PATCH v1.4 066/112] Steam Deck OLED WIFI fixes
+Subject: [PATCH v1.4 066/113] Steam Deck OLED WIFI fixes
 
 ---
  drivers/net/wireless/ath/ath11k/hw.c  |  1 +
@@ -12277,7 +12277,7 @@ index 8982b909c821..5810959a72fb 100644
 From 12958adcd293a627c32ebd7e37087ed014f1b963 Mon Sep 17 00:00:00 2001
 From: Ethan Geller <ethang@valvesoftware.com>
 Date: Thu, 16 Nov 2023 21:31:48 +0000
-Subject: [PATCH v1.4 067/112] Fix for Max98388 issue where speakers would not
+Subject: [PATCH v1.4 067/113] Fix for Max98388 issue where speakers would not
  be powered on when we resume from S3.
 
 The issue was that when we flush the regmap to the amp on resume, we were also flushing a value of 1 to the SW_RESET pin.
@@ -12550,7 +12550,7 @@ index b847d7c59ec0..bb03fb0c62b4 100644
 From dacf6c55e3f6f956f7d0c4f91ff82cdb65c57571 Mon Sep 17 00:00:00 2001
 From: John Schoenick <johns@valvesoftware.com>
 Date: Tue, 11 Jul 2023 15:27:33 -0700
-Subject: [PATCH v1.4 068/112] drm: panel-orientation-quirks: Add quirk for
+Subject: [PATCH v1.4 068/113] drm: panel-orientation-quirks: Add quirk for
  Valve Galileo
 
 ---
@@ -12582,7 +12582,7 @@ index e52e7e73b9d0..8db368236e03 100644
 From 8ff7d866815e8fe795551bfc7d7c5a993d2a2b9f Mon Sep 17 00:00:00 2001
 From: Swapnil Patel <swapatel@amd.com>
 Date: Thu, 2 Nov 2023 16:16:49 -0400
-Subject: [PATCH v1.4 069/112] Disable modes with >1200 MHz Pixel clocks when
+Subject: [PATCH v1.4 069/113] Disable modes with >1200 MHz Pixel clocks when
  connected via dock
 
 (cherry picked from commit 36301114e8a32e7f13985cbbeff7282d4c599aed)
@@ -12626,7 +12626,7 @@ index 1aed55b0ab6a..27af7505caca 100644
 From c34fc10e1970e9b4c8d55c055be1860d3f3a020c Mon Sep 17 00:00:00 2001
 From: Jeremy Selan <jeremys@valvesoftware.com>
 Date: Wed, 28 Apr 2021 14:33:36 -0700
-Subject: [PATCH v1.4 070/112] drm/amd: bump backlight brightness precision
+Subject: [PATCH v1.4 070/113] drm/amd: bump backlight brightness precision
  from 8 -> 16-bits
 
 Signed-off-by: Gabriel Krisman Bertazi <krisman@collabora.com>
@@ -12707,7 +12707,7 @@ index 5266424ce15b..b9fefe4e6d75 100644
 From 8e3639e09a980d7c182676d989f8ade9dd3f0a42 Mon Sep 17 00:00:00 2001
 From: Jeremy Selan <jeremys@valvesoftware.com>
 Date: Fri, 12 Nov 2021 10:03:20 -0800
-Subject: [PATCH v1.4 071/112] amd/drm: override backlight min value from 12 ->
+Subject: [PATCH v1.4 071/113] amd/drm: override backlight min value from 12 ->
  0
 
 This overrides backlight handling to the FULL range of the device {0,max}
@@ -12799,7 +12799,7 @@ index b9fefe4e6d75..872a17ff89e1 100644
 From 80c70621944fbddc046713a74ebd9b194603150e Mon Sep 17 00:00:00 2001
 From: "Pierre-Loup A. Griffais" <pgriffais@valvesoftware.com>
 Date: Wed, 8 Nov 2023 19:45:52 -0800
-Subject: [PATCH v1.4 072/112] amdgpu: fix Galileo desktop brightness
+Subject: [PATCH v1.4 072/113] amdgpu: fix Galileo desktop brightness
  overflowing
 
 500k uNits * 65k max brightness range overflows in the conversion code.
@@ -12828,7 +12828,7 @@ index 872a17ff89e1..ae5516c40d70 100644
 From 7c38df4bd02a17941cd2a9a9a94ec352ed27b37f Mon Sep 17 00:00:00 2001
 From: Andres Rodriguez <andresr@valvesoftware.com>
 Date: Wed, 22 Nov 2023 11:28:35 -0800
-Subject: [PATCH v1.4 073/112] Revert "PCI: Prevent xHCI driver from claiming
+Subject: [PATCH v1.4 073/113] Revert "PCI: Prevent xHCI driver from claiming
  AMD VanGogh USB3 DRD device"
 
 This reverts commit a4904c47fcd7fc9152b6b04409feac1130e2033d.
@@ -12879,7 +12879,7 @@ index 69449d13ff21..ac32ff9b866a 100644
 From 054a8e1d5c9625829c1ab2af9dd5d5004841964f Mon Sep 17 00:00:00 2001
 From: Joshua Ashton <joshua@froggi.es>
 Date: Wed, 6 Sep 2023 22:00:26 +0100
-Subject: [PATCH v1.4 074/112] drm/amd/display: Don't consider vblank passed if
+Subject: [PATCH v1.4 074/113] drm/amd/display: Don't consider vblank passed if
  currently in vertical front porch time
 
 Changing refresh rates on OLED displays works differently to typical
@@ -12960,7 +12960,7 @@ index ae5516c40d70..7617bf23bcd2 100644
 From 3a96b9c006fd2d650e79a97fc5461c872741fef8 Mon Sep 17 00:00:00 2001
 From: Joshua Ashton <joshua@froggi.es>
 Date: Sun, 3 Dec 2023 11:35:06 +0000
-Subject: [PATCH v1.4 075/112] drm/amd/display: Revert some of the vrr always
+Subject: [PATCH v1.4 075/113] drm/amd/display: Revert some of the vrr always
  on hack
 
 Fixes frame timings on some non)-VRR external displays going all whacky.
@@ -13006,7 +13006,7 @@ index 7617bf23bcd2..9ca72b3ae912 100644
 From 7d21a738add7fbeac6139f46706c1dc1fb3104ff Mon Sep 17 00:00:00 2001
 From: Matthew Schwartz <njtransit215@gmail.com>
 Date: Thu, 18 Apr 2024 11:36:01 -0700
-Subject: [PATCH v1.4 076/112] revert series of drivers/bluetooth/hci commits
+Subject: [PATCH v1.4 076/113] revert series of drivers/bluetooth/hci commits
  to fix Galileo/OLED Deck + Legion Go failing to suspend on 6.8 kernels
 
 Revert series of commits that causes a bluetooth regression where toggling Bluetooth on the Galileo/OLED Deck and Legion Go can cause the device to fail to suspend properly. Instead, the display turns dims for 5-10s before waking up automatically again.
@@ -13049,7 +13049,7 @@ Matthew Schwartz (7):
 From ee0e6353b6f4435f2f071b9b03f9215066cfea4f Mon Sep 17 00:00:00 2001
 From: Matthew Schwartz <njtransit215@gmail.com>
 Date: Thu, 18 Apr 2024 11:30:27 -0700
-Subject: [PATCH v1.4 077/112] Revert "Bluetooth: qca: fix device-address
+Subject: [PATCH v1.4 077/113] Revert "Bluetooth: qca: fix device-address
  endianness"
 
 This reverts commit a5425a30739fb1eab3c39ac8a8a9e6795c681fe8.
@@ -13128,7 +13128,7 @@ index 678f150229e7..e47b07ae1a63 100644
 From a8c17e497edf85c00d2d3d451c3a1aff43b95d83 Mon Sep 17 00:00:00 2001
 From: Matthew Schwartz <njtransit215@gmail.com>
 Date: Thu, 18 Apr 2024 11:30:39 -0700
-Subject: [PATCH v1.4 078/112] Revert "Bluetooth: btrtl: fix out of bounds
+Subject: [PATCH v1.4 078/113] Revert "Bluetooth: btrtl: fix out of bounds
  memory access"
 
 This reverts commit 0c657e641df1e77d6087688190f632cad9c0439b.
@@ -13155,7 +13155,7 @@ index c0436881a533..b66136348bd6 100644
 From 658c658ab342692367cff9f6a0e1037182da2847 Mon Sep 17 00:00:00 2001
 From: Matthew Schwartz <njtransit215@gmail.com>
 Date: Thu, 18 Apr 2024 11:30:43 -0700
-Subject: [PATCH v1.4 079/112] Revert "Bluetooth: hci_h5: Add ability to
+Subject: [PATCH v1.4 079/113] Revert "Bluetooth: hci_h5: Add ability to
  allocate memory for private data"
 
 This reverts commit 46a7d9aa6e456c161746744cc08961bb83dc97b3.
@@ -13251,7 +13251,7 @@ index 00bf7ae82c5b..308e4d8de54e 100644
 From 695ec0a3392d7a70912be52a7af099ae4c113a2a Mon Sep 17 00:00:00 2001
 From: Matthew Schwartz <njtransit215@gmail.com>
 Date: Thu, 18 Apr 2024 11:30:50 -0700
-Subject: [PATCH v1.4 080/112] Revert "Bluetooth: hci_qca: don't use
+Subject: [PATCH v1.4 080/113] Revert "Bluetooth: hci_qca: don't use
  IS_ERR_OR_NULL() with gpiod_get_optional()"
 
 This reverts commit d8c7785e8104359f139cdfa99e2511575c4d4823.
@@ -13279,7 +13279,7 @@ index e47b07ae1a63..78fe4d2a2e08 100644
 From 7cf9bebb9882fb62c07d0a8b678dcb31a0825b32 Mon Sep 17 00:00:00 2001
 From: Matthew Schwartz <njtransit215@gmail.com>
 Date: Thu, 18 Apr 2024 11:30:54 -0700
-Subject: [PATCH v1.4 081/112] Revert "Bluetooth: qca: Fix triggering coredump
+Subject: [PATCH v1.4 081/113] Revert "Bluetooth: qca: Fix triggering coredump
  implementation"
 
 This reverts commit 6abf9dd26bb1699c17d601b9a292577d01827c0e.
@@ -13316,7 +13316,7 @@ index 78fe4d2a2e08..d5f209d53b28 100644
 From 5ae45b54b55e37ce30ac5c1b32bece1b1b1f106d Mon Sep 17 00:00:00 2001
 From: Antheas Kapenekakis <git@antheas.dev>
 Date: Sat, 12 Oct 2024 19:14:10 +0200
-Subject: [PATCH v1.4 082/112] [BEGIN] Modern Suspend patchset
+Subject: [PATCH v1.4 082/113] [BEGIN] Modern Suspend patchset
 
 -- 
 2.47.0
@@ -13325,7 +13325,7 @@ Subject: [PATCH v1.4 082/112] [BEGIN] Modern Suspend patchset
 From 73a4abd50209a66d5a1ece4d271b3b764d73430b Mon Sep 17 00:00:00 2001
 From: Antheas Kapenekakis <lkml@antheas.dev>
 Date: Wed, 18 Sep 2024 23:53:53 +0200
-Subject: [PATCH v1.4 083/112] acpi/x86: s2idle: add support for Display Off
+Subject: [PATCH v1.4 083/113] acpi/x86: s2idle: add support for Display Off
  and Display On callbacks
 
 The Display Off and Display On firmware notifications are meant to signify
@@ -13407,7 +13407,7 @@ index 09f8397bae15..c527dc0ae5ae 100644
 From d76f7c39e5a8bd0839ac26c23d22947f5c645b33 Mon Sep 17 00:00:00 2001
 From: Antheas Kapenekakis <lkml@antheas.dev>
 Date: Thu, 19 Sep 2024 00:02:32 +0200
-Subject: [PATCH v1.4 084/112] acpi/x86: s2idle: handle Display On/Off calls
+Subject: [PATCH v1.4 084/113] acpi/x86: s2idle: handle Display On/Off calls
  outside of suspend sequence
 
 Currently, the Display On/Off calls are handled within the suspend
@@ -13461,7 +13461,7 @@ index c527dc0ae5ae..610f8ecaeebd 100644
 From fb0af6320d230be15aa556e209faffbcbb7149ea Mon Sep 17 00:00:00 2001
 From: Antheas Kapenekakis <lkml@antheas.dev>
 Date: Sun, 22 Sep 2024 11:47:29 +0200
-Subject: [PATCH v1.4 085/112] acpi/x86: s2idle: add quirk table for modern
+Subject: [PATCH v1.4 085/113] acpi/x86: s2idle: add quirk table for modern
  standby delays
 
 Unfortunately, some modern standby systems, including the ROG Ally, rely
@@ -13579,7 +13579,7 @@ index 610f8ecaeebd..af2abdd2f8c3 100644
 From fda1f9e164018fac82d04ad28f6cf79f7ed99a5e Mon Sep 17 00:00:00 2001
 From: Antheas Kapenekakis <lkml@antheas.dev>
 Date: Thu, 19 Sep 2024 00:22:03 +0200
-Subject: [PATCH v1.4 086/112] acpi/x86: s2idle: call Display On/Off as part of
+Subject: [PATCH v1.4 086/113] acpi/x86: s2idle: call Display On/Off as part of
  callbacks and rename
 
 Move the Display On/Off notifications into dedicated callbacks that gate
@@ -13772,7 +13772,7 @@ index dd0b40b9bbe8..a17e28b91326 100644
 From 0079debfbff254d11fb870aadfab58096b935bc7 Mon Sep 17 00:00:00 2001
 From: Antheas Kapenekakis <lkml@antheas.dev>
 Date: Thu, 19 Sep 2024 00:29:59 +0200
-Subject: [PATCH v1.4 087/112] platform/x86: asus-wmi: remove Ally (1st gen)
+Subject: [PATCH v1.4 087/113] platform/x86: asus-wmi: remove Ally (1st gen)
  and Ally X suspend quirk
 
 By moving the Display On/Off calls outside of the suspend sequence and
@@ -13893,7 +13893,7 @@ index 321a658e4554..0a3202bfaf1a 100644
 From cbf56c8009f2690d16f89f6061aed7e3d40d6dab Mon Sep 17 00:00:00 2001
 From: Antheas Kapenekakis <lkml@antheas.dev>
 Date: Wed, 25 Sep 2024 14:10:11 +0200
-Subject: [PATCH v1.4 088/112] acpi/x86: s2idle: add support for Sleep Entry
+Subject: [PATCH v1.4 088/113] acpi/x86: s2idle: add support for Sleep Entry
  and Sleep Exit callbacks
 
 The Sleep Entry and Sleep Exit firmware notifications allow the platform
@@ -13974,7 +13974,7 @@ index af2abdd2f8c3..dab299e28195 100644
 From 7bfa1083f584dd6cfaadfcedbf96c7ca01ccbf49 Mon Sep 17 00:00:00 2001
 From: Antheas Kapenekakis <lkml@antheas.dev>
 Date: Wed, 25 Sep 2024 14:19:00 +0200
-Subject: [PATCH v1.4 089/112] acpi/x86: s2idle: handle Sleep Entry/Exit calls
+Subject: [PATCH v1.4 089/113] acpi/x86: s2idle: handle Sleep Entry/Exit calls
  outside of suspend sequence
 
 As with Display On/Off, these calls should be made outside the suspend
@@ -14022,7 +14022,7 @@ index dab299e28195..9dcdd5273318 100644
 From 073c9d6779a3013f703e395a138ae11140505cb4 Mon Sep 17 00:00:00 2001
 From: Antheas Kapenekakis <lkml@antheas.dev>
 Date: Wed, 25 Sep 2024 14:29:42 +0200
-Subject: [PATCH v1.4 090/112] acpi/x86: s2idle: update quirk table for Sleep
+Subject: [PATCH v1.4 090/113] acpi/x86: s2idle: update quirk table for Sleep
  Entry/Exit
 
 Add delays between the Sleep Entry and Sleep Exit calls, to avoid issues
@@ -14109,7 +14109,7 @@ index 9dcdd5273318..1352c4066822 100644
 From 3193912e38294ac32e05c92092fb80fb6397c132 Mon Sep 17 00:00:00 2001
 From: Antheas Kapenekakis <lkml@antheas.dev>
 Date: Wed, 25 Sep 2024 14:41:03 +0200
-Subject: [PATCH v1.4 091/112] acpi/x86: s2idle: call Sleep Entry/Exit as part
+Subject: [PATCH v1.4 091/113] acpi/x86: s2idle: call Sleep Entry/Exit as part
  of callbacks.
 
 Move the Sleep Entry/Exit notifications outside the suspend sequence,
@@ -14258,7 +14258,7 @@ index a17e28b91326..6ff5e34c016e 100644
 From 0378a29365c39089ddc5b73ba1383836001218f1 Mon Sep 17 00:00:00 2001
 From: Antheas Kapenekakis <git@antheas.dev>
 Date: Sat, 12 Oct 2024 20:11:00 +0200
-Subject: [PATCH v1.4 092/112] [BEGIN] TKG, BORE, Sched_ext and HDR patches
+Subject: [PATCH v1.4 092/113] [BEGIN] TKG, BORE, Sched_ext and HDR patches
 
 TKG is from [1] and BORE and sched_ext are from [2].
 
@@ -14271,7 +14271,7 @@ Link: https://github.com/CachyOS/kernel-patches [2]
 From fa6fedf268bb19fa86d5d50c314705a434a73f9f Mon Sep 17 00:00:00 2001
 From: =?UTF-8?q?Felix=20H=C3=A4dicke?= <felixhaedicke@web.de>
 Date: Thu, 19 Nov 2020 09:22:32 +0100
-Subject: [PATCH v1.4 093/112] HID: quirks: Add Apple Magic Trackpad 2 to
+Subject: [PATCH v1.4 093/113] HID: quirks: Add Apple Magic Trackpad 2 to
  hid_have_special_driver list
 MIME-Version: 1.0
 Content-Type: text/plain; charset=UTF-8
@@ -14308,7 +14308,7 @@ index e0bbf0c6345d..5d229e2781c7 100644
 From 10bd7ea056e1096908df4a906f08dbe61635d584 Mon Sep 17 00:00:00 2001
 From: Tk-Glitch <ti3nou@gmail.com>
 Date: Wed, 3 Feb 2021 11:20:12 +0200
-Subject: [PATCH v1.4 094/112] Revert "cpufreq: Avoid configuring old governors
+Subject: [PATCH v1.4 094/113] Revert "cpufreq: Avoid configuring old governors
  as default with intel_pstate"
 
 This is an undesirable behavior for us since our aggressive ondemand performs
@@ -14345,7 +14345,7 @@ index 10cda6f2fe1d..76a8e4741163 100644
 From d686f32ca96d790cf48d10a945123688afd293ad Mon Sep 17 00:00:00 2001
 From: "Jan Alexander Steffens (heftig)" <heftig@archlinux.org>
 Date: Sat, 13 Jan 2024 15:29:25 +0100
-Subject: [PATCH v1.4 095/112] arch/Kconfig: Default to maximum amount of ASLR
+Subject: [PATCH v1.4 095/113] arch/Kconfig: Default to maximum amount of ASLR
  bits
 
 To mitigate https://zolutal.github.io/aslrnt/; do this with a patch to
@@ -14383,7 +14383,7 @@ index 975dd22a2dbd..de69b8f5b5be 100644
 From d553874506cfea790fa2858f2e992509b6e7a7a0 Mon Sep 17 00:00:00 2001
 From: Peter Jung <admin@ptr1337.dev>
 Date: Thu, 21 Mar 2024 19:00:50 +0100
-Subject: [PATCH v1.4 096/112] cachy: move AMD_PRIVATE_COLOR to Kconfig
+Subject: [PATCH v1.4 096/113] cachy: move AMD_PRIVATE_COLOR to Kconfig
 
 Co-authored-by: PedroHLC <root@pedrohlc.com>
 Signed-off-by: Peter Jung <admin@ptr1337.dev>
@@ -14505,7 +14505,7 @@ index a573a6639898..52e0e42e26a5 100644
 From 9339179313db18fc591b78fdcbd51a7d4341adb6 Mon Sep 17 00:00:00 2001
 From: Tk-Glitch <ti3nou@gmail.com>
 Date: Sat, 13 Apr 2024 18:25:35 +0530
-Subject: [PATCH v1.4 097/112] revert "drm/amd/pm: Fetch current power limit
+Subject: [PATCH v1.4 097/113] revert "drm/amd/pm: Fetch current power limit
  from FW"
 
 Fetching FW value prevents power limit modification by the user.
@@ -14534,7 +14534,7 @@ index 2cf951184561..a9054a9ff271 100644
 From f90d8e6187d696bbdb5fa4ea835e3457e801c218 Mon Sep 17 00:00:00 2001
 From: Javier Martinez Canillas <javierm@redhat.com>
 Date: Thu, 19 May 2022 14:40:07 +0200
-Subject: [PATCH v1.4 098/112] drivers/firmware: skip simpledrm if
+Subject: [PATCH v1.4 098/113] drivers/firmware: skip simpledrm if
  nvidia-drm.modeset=1 is set
 
 The Nvidia proprietary driver has some bugs that leads to issues if used
@@ -14624,7 +14624,7 @@ index a3df782fa687..940d8f514341 100644
 From a639af388f0c0812120fb88af3b5ae317343e647 Mon Sep 17 00:00:00 2001
 From: Peter Jung <admin@ptr1337.dev>
 Date: Thu, 10 Oct 2024 12:47:12 +0200
-Subject: [PATCH v1.4 099/112] add sched-ext support
+Subject: [PATCH v1.4 099/113] add sched-ext support
 
 Signed-off-by: Peter Jung <admin@ptr1337.dev>
 ---
@@ -32559,7 +32559,7 @@ index 000000000000..bc13dfec1267
 From 34e073d17b6f63c2b87e4c90a59c2747c9bc434b Mon Sep 17 00:00:00 2001
 From: Antheas Kapenekakis <git@antheas.dev>
 Date: Sat, 12 Oct 2024 20:36:44 +0200
-Subject: [PATCH v1.4 100/112] add bore scheduler (linux6.11.y-bore5.6.1)
+Subject: [PATCH v1.4 100/113] add bore scheduler (linux6.11.y-bore5.6.1)
 
 ---
  include/linux/sched.h      |  20 +-
@@ -33556,7 +33556,7 @@ index 4965853277e2..f2256886a700 100644
 From 2bbf28887ec7fe5498b383715c372aebd50bcadd Mon Sep 17 00:00:00 2001
 From: Antheas Kapenekakis <git@antheas.dev>
 Date: Sat, 12 Oct 2024 19:23:29 +0200
-Subject: [PATCH v1.4 101/112] [BEGIN] General and Temporary Patches
+Subject: [PATCH v1.4 101/113] [BEGIN] General and Temporary Patches
 
 -- 
 2.47.0
@@ -33565,7 +33565,7 @@ Subject: [PATCH v1.4 101/112] [BEGIN] General and Temporary Patches
 From 82876adc1eef1ce634416380a2d39c30113b4ab0 Mon Sep 17 00:00:00 2001
 From: Denis <benato.denis96@gmail.com>
 Date: Thu, 28 Sep 2023 03:40:53 +0200
-Subject: [PATCH v1.4 102/112] [NOT FOR UPSTREAM] add acpi_call module
+Subject: [PATCH v1.4 102/113] [NOT FOR UPSTREAM] add acpi_call module
 
 ---
  drivers/platform/x86/Kconfig     |   5 +
@@ -34072,7 +34072,7 @@ index 000000000000..d7bc238e16da
 From b4e3f5922ab6f2af68fb5e0fd7540fb86c71a47d Mon Sep 17 00:00:00 2001
 From: Abhishek Pandit-Subedi <abhishekpandit@chromium.org>
 Date: Wed, 4 Dec 2019 18:30:54 -0800
-Subject: [PATCH v1.4 103/112] Input: uinput - Add UI_SET_PHYS_STR and
+Subject: [PATCH v1.4 103/113] Input: uinput - Add UI_SET_PHYS_STR and
  UI_SET_UNIQ_STR
 
 The ioctl definition for UI_SET_PHYS is ambiguous because it is defined
@@ -34226,7 +34226,7 @@ index c9e677e3af1d..84d4fa142830 100644
 From 14bb1d35999d7c35e0820c2bdf1f2ee792673b8c Mon Sep 17 00:00:00 2001
 From: Antheas Kapenekakis <git@antheas.dev>
 Date: Sat, 12 Oct 2024 19:24:08 +0200
-Subject: [PATCH v1.4 104/112] Fix HAINAN amdgpu card not being bootable
+Subject: [PATCH v1.4 104/113] Fix HAINAN amdgpu card not being bootable
 
 Link:
 ---
@@ -34275,7 +34275,7 @@ index 9deb91970d4d..5db16c20bd17 100644
 From 09e9c8f18eb012d54fd203a291121606189ead1d Mon Sep 17 00:00:00 2001
 From: Simon May <simon.may@protonmail.ch>
 Date: Sun, 19 Sep 2021 23:45:59 +0200
-Subject: [PATCH v1.4 105/112] Revert "PCI: Add a REBAR size quirk for Sapphire
+Subject: [PATCH v1.4 105/113] Revert "PCI: Add a REBAR size quirk for Sapphire
  RX 5600 XT Pulse"
 
 This reverts commit 907830b0fc9e374d00f3c83de5e426157b482c01.
@@ -34310,7 +34310,7 @@ index 85ced6958d6d..a74c31e032c8 100644
 From 7261565ca9c060d3eae47d4d90c2f647c254b274 Mon Sep 17 00:00:00 2001
 From: K Prateek Nayak <kprateek.nayak@amd.com>
 Date: Wed, 21 Sep 2022 12:06:38 +0530
-Subject: [PATCH v1.4 106/112] ACPI: processor_idle: Skip dummy wait for
+Subject: [PATCH v1.4 106/113] ACPI: processor_idle: Skip dummy wait for
  processors based on the Zen microarchitecture
 MIME-Version: 1.0
 Content-Type: text/plain; charset=UTF-8
@@ -34446,7 +34446,7 @@ index 831fa4a12159..aec5c5ab9e64 100644
 From 44985c25e9f391ad53bfd63d172eec412b205b78 Mon Sep 17 00:00:00 2001
 From: GloriousEggroll <gloriouseggroll@gmail.com>
 Date: Mon, 30 Oct 2023 22:36:19 -0600
-Subject: [PATCH v1.4 107/112] Fix the steam deck not coming back from
+Subject: [PATCH v1.4 107/113] Fix the steam deck not coming back from
  hibernation with revert
 
 Revert "nvme-pci: drop redundant pci_enable_pcie_error_reporting()"
@@ -34558,7 +34558,7 @@ index 4b97f38f3fcf..3b338b556ecb 100644
 From 92e70b232ef076b03b80e1ef2cadba1c9413f2f7 Mon Sep 17 00:00:00 2001
 From: Steven Barrett <steven@liquorix.net>
 Date: Fri, 15 Mar 2024 12:36:51 -0500
-Subject: [PATCH v1.4 108/112] Cachy: drm/amdgpu/pm: Allow override of
+Subject: [PATCH v1.4 108/113] Cachy: drm/amdgpu/pm: Allow override of
  min_power_limit with ignore_min_pcap
 
 ---
@@ -34661,7 +34661,7 @@ index a9054a9ff271..2fe02756c743 100644
 From f36f0d244322eab0bcc05ebbbcbc23a4ea0919c8 Mon Sep 17 00:00:00 2001
 From: GloriousEggroll <gloriouseggroll@gmail.com>
 Date: Tue, 17 Jan 2023 12:08:46 -0700
-Subject: [PATCH v1.4 109/112] Allow to set custom USB pollrate for specific
+Subject: [PATCH v1.4 109/113] Allow to set custom USB pollrate for specific
  devices like so: usbcore.interrupt_interval_override=045e:00db:16,1bcf:0005:1
 
 ---
@@ -34920,7 +34920,7 @@ index b8324ea05b20..f6f57d7d73d4 100644
 From 8e5f635adcc252a4bf4ccce903537cb56025e804 Mon Sep 17 00:00:00 2001
 From: GloriousEggroll <gloriouseggroll@gmail.com>
 Date: Mon, 29 May 2023 17:15:14 -0600
-Subject: [PATCH v1.4 110/112] set ds controller bluetooth pollrate to 1 ms
+Subject: [PATCH v1.4 110/113] set ds controller bluetooth pollrate to 1 ms
 
 ---
  drivers/hid/hid-playstation.c | 4 ++--
@@ -34948,7 +34948,7 @@ index e7c309cfe3a0..f3ea20af54ab 100644
 From 17470def9fa36cc2615a447c7a2475b72a4a2b8e Mon Sep 17 00:00:00 2001
 From: Jan200101 <sentrycraft123@gmail.com>
 Date: Mon, 27 Nov 2023 09:53:59 +0100
-Subject: [PATCH v1.4 111/112] drm/amdgpu: enable SI and CIK support by default
+Subject: [PATCH v1.4 111/113] drm/amdgpu: enable SI and CIK support by default
 
 Signed-off-by: Jan200101 <sentrycraft123@gmail.com>
 ---
@@ -35022,7 +35022,7 @@ index 7bf08164140e..865f186f48c4 100644
 From 1425c4e14ce9e093496f2cdd645fdcd0bb34b9fa Mon Sep 17 00:00:00 2001
 From: John Martens <john.martens4@proton.me>
 Date: Fri, 29 Mar 2024 20:18:47 +0000
-Subject: [PATCH v1.4 112/112] add Lenovo Legion Laptop kernel driver
+Subject: [PATCH v1.4 112/113] add Lenovo Legion Laptop kernel driver
 
 Add extra support for Lenovo Legion laptops.
 ---
@@ -41159,6 +41159,41 @@ index 000000000000..cbdc716e9dd0
 +}
 +
 +module_exit(legion_exit);
+-- 
+2.47.0
+
+
+From fd874b20077a0c1dcb4235f151c3dee9ea5d1efb Mon Sep 17 00:00:00 2001
+From: Antheas Kapenekakis <git@antheas.dev>
+Date: Mon, 21 Oct 2024 19:29:25 +0200
+Subject: [PATCH v1.4 113/113] Revert "drm/amdgpu: use GTT only as fallback for
+ VRAM|GTT"
+
+This reverts commit 216c1282dde38ca87ebdf1ccacee5a0682901574.
+
+Most promising suspect for the AutoUMA regression, see:
+https://gitlab.freedesktop.org/drm/amd/-/issues/3704
+---
+ drivers/gpu/drm/amd/amdgpu/amdgpu_object.c | 6 ------
+ 1 file changed, 6 deletions(-)
+
+diff --git a/drivers/gpu/drm/amd/amdgpu/amdgpu_object.c b/drivers/gpu/drm/amd/amdgpu/amdgpu_object.c
+index e32161f6b67a..53b488312e49 100644
+--- a/drivers/gpu/drm/amd/amdgpu/amdgpu_object.c
++++ b/drivers/gpu/drm/amd/amdgpu/amdgpu_object.c
+@@ -176,12 +176,6 @@ void amdgpu_bo_placement_from_domain(struct amdgpu_bo *abo, u32 domain)
+ 			abo->flags & AMDGPU_GEM_CREATE_PREEMPTIBLE ?
+ 			AMDGPU_PL_PREEMPT : TTM_PL_TT;
+ 		places[c].flags = 0;
+-		/*
+-		 * When GTT is just an alternative to VRAM make sure that we
+-		 * only use it as fallback and still try to fill up VRAM first.
+-		 */
+-		if (domain & abo->preferred_domains & AMDGPU_GEM_DOMAIN_VRAM)
+-			places[c].flags |= TTM_PL_FLAG_FALLBACK;
+ 		c++;
+ 	}
+ 
 -- 
 2.47.0
 
