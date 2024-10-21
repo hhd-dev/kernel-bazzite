@@ -892,11 +892,6 @@ Source23: x509.genkey.rhel
 Source24: %{name}-aarch64-rhel.config
 Source25: %{name}-aarch64-debug-rhel.config
 
-Source27: %{name}-ppc64le-rhel.config
-Source28: %{name}-ppc64le-debug-rhel.config
-Source29: %{name}-s390x-rhel.config
-Source30: %{name}-s390x-debug-rhel.config
-Source31: %{name}-s390x-zfcpdump-rhel.config
 Source32: %{name}-x86_64-rhel.config
 Source33: %{name}-x86_64-debug-rhel.config
 
@@ -916,14 +911,8 @@ Source52: %{name}-aarch64-fedora.config
 Source53: %{name}-aarch64-debug-fedora.config
 Source54: %{name}-aarch64-16k-fedora.config
 Source55: %{name}-aarch64-16k-debug-fedora.config
-Source56: %{name}-ppc64le-fedora.config
-Source57: %{name}-ppc64le-debug-fedora.config
-Source58: %{name}-s390x-fedora.config
-Source59: %{name}-s390x-debug-fedora.config
 Source60: %{name}-x86_64-fedora.config
 Source61: %{name}-x86_64-debug-fedora.config
-Source700: %{name}-riscv64-fedora.config
-Source701: %{name}-riscv64-debug-fedora.config
 
 Source62: def_variants.yaml.fedora
 %endif
