@@ -113,3 +113,4 @@ jobs:
               ${{ matrix.arch }}/kernel-*.rpm
               x86_64/linux-*.pkg.tar.zst
             fail_on_unmatched_files: false
+            make_latest: true
