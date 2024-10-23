@@ -1,3 +1,9 @@
+https://gitlab.com/cki-project/kernel-ark/-/commit/5726a406fa039a9c1cf831953428f87caff38745
+ 5726a406fa039a9c1cf831953428f87caff38745 Bluetooth: btusb: Fix not being able to reconnect after suspend
+
+https://gitlab.com/cki-project/kernel-ark/-/commit/b4af2ea6127c979d151fe78817cb86e999d0323b
+ b4af2ea6127c979d151fe78817cb86e999d0323b Bluetooth: btusb: Fix regression with fake CSR controllers 0a12:0001
+
 https://gitlab.com/cki-project/kernel-ark/-/commit/b630c41705d79da0dfb19aa07a8985ba6fb61a02
  b630c41705d79da0dfb19aa07a8985ba6fb61a02 HID: amd_sfh: Switch to device-managed dmam_alloc_coherent()
 

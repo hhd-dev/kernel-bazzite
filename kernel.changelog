@@ -1,3 +1,11 @@
+* Tue Oct 22 2024 Augusto Caringi <acaringi@redhat.com> [6.11.5-0]
+- Revert "fedora/configs: enable GPIO expander drivers" (Justin M. Forbes)
+- Add bluetooth bzs to BugsFixed (Justin M. Forbes)
+- Bluetooth: btusb: Fix not being able to reconnect after suspend (Luiz Augusto von Dentz)
+- Bluetooth: btusb: Fix regression with fake CSR controllers 0a12:0001 (Luiz Augusto von Dentz)
+- Linux v6.11.5
+Resolves: 
+
 * Thu Oct 17 2024 Augusto Caringi <acaringi@redhat.com> [6.11.4-0]
 - Add F39 and F40 to release_targets (Justin M. Forbes)
 - Linux v6.11.4
