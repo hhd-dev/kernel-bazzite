@@ -112,5 +112,6 @@ jobs:
               .build-*.log
               ${{ matrix.arch }}/kernel-*.rpm
               x86_64/linux-*.pkg.tar.zst
+              x86_64/linux-*.pkg.tar.zst.sig
             fail_on_unmatched_files: false
             make_latest: true
